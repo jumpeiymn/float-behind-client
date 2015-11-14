@@ -1,0 +1,90 @@
+@charset "utf-8";
+body {
+  background: url(image/background.png) center center / cover no-repeat fixed;
+}
+.icon{
+  display:block;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+img.icon{
+  width: 180px;
+  height: 180px;
+  margin-top: 100px;
+}
+/* ふわふわさせたいものに fuwafuwaクラスを付与 */
+.fuwafuwa {
+	-webkit-animation-name:fuwafuwa; /* fuwafuwaっていうアニメーションをしてね！ */
+	-webkit-animation-duration:6s;
+	-webkit-animation-iteration-count:infinite;
+	/*-webkit-animation-direction:alternate;*/
+	-webkit-animation-timing-function:ease-in-out;
+
+	-moz-animation-name:fuwafuwa;
+	-moz-animation-duration:6s;
+	-moz-animation-iteration-count:infinite;
+	/*-moz-animation-direction:alternate;*/
+	-moz-animation-timing-function:ease-in-out;
+}
+/* fuwafuwaっていうアニメーションはこんなふうだよ！ */
+@-webkit-keyframes fuwafuwa {
+	0% {-webkit-transform:translate(0, 0);}
+	50% {-webkit-transform:translate(0, -25px);}
+	100% {-webkit-transform:translate(0, 0);}
+}
+@-moz-keyframes fuwafuwa {
+	0% {-moz-transform:translate(0, 0);}
+	50% {-moz-transform:translate(0, -25px);}
+	100% {-moz-transform:translate(0, 0);}
+}
+.logo{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+p.subtitle{
+  color:#FFFFFF;
+  text-align: center;
+  font-size: 21px;
+  font: 25px 'Share Tech Mono', monospace;
+}
+p.context{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 19px;
+  max-width: 670px;
+  margin: 0 auto;
+}
+.path{
+stroke:#FFFFFF;
+fill:none;
+stroke-width:1;
+stroke-dasharray: 3000;
+stroke-dashoffset:3000;
+animation: DASH 7s ease-in alternate forwards;
+-webkit-animation:DASH 7s ease-in 0s forwards;
+-o-animation:DASH 7s ease-in 0s forwards;
+animation:DASH 7s ease-in 0s forwards;
+}
+@keyframes DASH{
+0%{stroke-dashoffset:3000;}
+100%{stroke-dashoffset:0;}
+}
+@-moz-keyframes DASH{
+0%{stroke-dashoffset:3000;}
+100%{stroke-dashoffset:0;}
+}
+@-webkit-keyframes DASH{
+0%{stroke-dashoffset:3000;}
+100%{stroke-dashoffset:0;}
+}
+@-o-keyframes DASH{
+0%{stroke-dashoffset:3000;}
+100%{stroke-dashoffset:0;}
+}
+@-ms-keyframes DASHf{
+0%{stroke-dashoffset:3000;}
+100%{stroke-dashoffset:0;
+}
